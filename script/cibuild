@@ -1,0 +1,6 @@
+#!/bin/sh
+PRE=$(dirname $0)
+$PRE/build
+docker stop teamspeak || echo teamspeak already stopped
+docker rm teamspeak || echo teamspeak already removed
+docker run -d --name teamspeak -v $PRE/../data:/opt/ts3/data -p 9987:9987/udp foobert/teamspeak

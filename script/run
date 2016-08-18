@@ -1,0 +1,2 @@
+#!/bin/sh
+docker run --rm -t -v $PWD/data:/opt/ts3/data -p 9987:9987/udp foobert/teamspeak
