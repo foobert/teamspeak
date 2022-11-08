@@ -1,7 +1,7 @@
 FROM debian:jessie
 RUN apt-get update && apt-get install -y curl bzip2 && rm -rf /var/apt/lists
 RUN cd /opt && \
-    curl -o /opt/ts.tar.bz2 https://files.teamspeak-services.com/releases/server/3.13.3/teamspeak3-server_linux_amd64-3.13.3.tar.bz2 && \
+    curl -o /opt/ts.tar.bz2 https://files.teamspeak-services.com/releases/server/3.13.7/teamspeak3-server_linux_amd64-3.13.7.tar.bz2 && \
     tar xjf ts.tar.bz2 && \
     rm ts.tar.bz2 && \
     mv /opt/teamspeak3-server_linux_amd64 /opt/ts3 && \
